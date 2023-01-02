@@ -1,9 +1,41 @@
 .section {
     background-color: #FFF;
     width: 100%;
+    box-shadow: 0px 0px 4px 0px #dadada;
 }
 
 .section__title {
     padding: 20px;
     margin: 0;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.section__list {
+
+}
+
+.section__tasks {
+    padding: 0px;
+    margin: 10px 0;
+
+}
+
+.section__item {
+    padding: 20px;
+    border-bottom: 2px solid #f1f1f1;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-areas: 
+    "done task task task delete";
+    justify-content: stretch;
+}
+
+.section__submit {
+    grid-area: done;
+}
+
+.section__submit--remove {
+    grid-area: delete;
+    text-decoration: none;
 }
