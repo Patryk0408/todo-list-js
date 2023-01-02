@@ -1,32 +1,56 @@
 {
-    const tasks = [
-        {
-            content: "Pograć w czołgi",
-            done: false,
-        },
-        {
-            content: "Kupić mustanga",
-            done: true,
-        }
-    ];
+  const tasks = [
+    {
+      content: "Pograć w czołgi",
+      done: false,
+    },
+    {
+      content: "Kupić mustanga",
+      done: true,
+    },
+  ];
 
-    const render = () => {
-        let htmlString = "";
+  const render = () => {
+    let htmlString = "";
 
-        for (const task of tasks) {
-            htmlString += `
-                <li>
+    for (const task of tasks) {
+      htmlString += `
+                <li ${task.done ? 'style="text-decoration: line-through"' : ""}>
                     ${task.content}
                 </li>
             `;
-        };
-        
-        document.querySelector(".js-tasks").innerHTML = htmlString;
-    };
+    }
 
-    const init = () => {
-        render();
-    };
+    document.querySelector(".js-tasks").innerHTML = htmlString;
+  };
 
-    init();
+  const addNewTask = (newTaskContent) => {
+    tasks.push({
+      content: newTaskContent,
+    });
+
+    render();
+  };
+
+  onFormSubmit = (event) => {
+    event.preventDefault();
+
+    const newTaskContent = document.querySelector(".js-newTask").value.trim();
+
+    if (newTaskContent === "") {
+      return;
+    }
+
+    addNewTask(newTaskContent);
+  };
+
+  const init = () => {
+    render();
+
+    const form = document.querySelector(".js-form");
+
+    form.addEventListener("submit", onFormSubmit);
+  };
+
+  init();
 }
