@@ -1,14 +1,5 @@
 {
-  const tasks = [
-    {
-      content: "Pograć w czołgi",
-      done: false,
-    },
-    {
-      content: "Kupić mustanga",
-      done: true,
-    },
-  ];
+  const tasks = [];
 
   const addNewTask = (newTaskContent) => {
     tasks.push({
@@ -20,6 +11,11 @@
 
   const removeTask = (taskIndex) => {
     tasks.splice(taskIndex, 1);
+    render();
+  };
+
+  const toggleTaskDone = (taskIndex) => {
+    tasks[taskIndex].done = !tasks[taskIndex].done;
     render();
   };
 
@@ -40,9 +36,17 @@
 
     const removeButtons = document.querySelectorAll(".js-remove");
 
-    removeButtons.forEach((removeButtons, index) => {
+    removeButtons.forEach((removeButtons, taskIndex) => {
       removeButtons.addEventListener("click", () => {
-        removeTask();
+        removeTask(taskIndex);
+      });
+    });
+
+    const toggleDoneButtons = document.querySelectorAll(".js-done");
+
+    toggleDoneButtons.forEach((toggleDoneButtons, taskIndex) => {
+      toggleDoneButtons.addEventListener("click", () => {
+        toggleTaskDone(taskIndex);
       });
     });
   };
