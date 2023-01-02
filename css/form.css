@@ -1,0 +1,24 @@
+.form {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: 
+    "input input input button";
+    justify-content: stretch;
+
+}
+
+.form__input {
+    padding: 10px;
+    margin: 20px;
+    max-width: 100%;
+    grid-area: input;
+    justify-items: stretch;
+}
+
+.form__submit {
+    padding: 10px;
+    background-color: teal;
+    color: #FFF;
+    border: none;
+    margin: 20px;
+}

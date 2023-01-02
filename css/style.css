@@ -5,3 +5,8 @@ html {
 *, ::before, ::after {
     box-sizing: inherit;
 }
+
+body {
+    background-color: #f1f1f1;
+    font-family: 'Lato', sans-serif;
+}
