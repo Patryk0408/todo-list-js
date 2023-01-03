@@ -1,17 +1,14 @@
 .section {
     background-color: #FFF;
     width: 100%;
-    box-shadow: 0px 0px 4px 0px #dadada;
+    box-shadow: 0px 0px 4px 0px #d7d3d312;
+    margin-bottom: 10px;
 }
 
 .section__title {
     padding: 20px;
     margin: 0;
     border-bottom: 2px solid #f1f1f1;
-}
-
-.section__list {
-
 }
 
 .section__tasks {

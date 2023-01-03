@@ -2,19 +2,18 @@
     display: grid;
     grid-template-columns: 1fr auto;
     grid-gap: 20px;
-    justify-content: stretch;
     padding: 20px;
 }
 
 .form__input {
     max-width: 100%;
     justify-items: stretch;
-    padding: 10px;
+    padding: 8px;
 }
 
 .form__submit {
     background-color: teal;
     color: #FFF;
     border: none;
-    padding: 10px;
+    padding: 8px;
 }
