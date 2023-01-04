@@ -44,11 +44,13 @@
       htmlString +=
         `<li class="section__item">
           <button class="section__submit js-done">
-            <span class="material-symbols-outlined done">
+            <span class="material-symbols-outlined done${!task.done ? " section__symbol--done" : ""}">
               check
             </span>
           </button>
-          <span class="section__task" ${task.done ? "style=\"text-decoration: line-through\"" : ""}>
+          <span 
+            class="section__task${task.done ? " section__task--done" : ""}"
+          >
             ${task.content}
           </span>
           <button class="section__submit--remove js-remove">
@@ -74,6 +76,8 @@
     }
 
     addNewTask(newTaskContent);
+
+    click()
   };
 
   const init = () => {

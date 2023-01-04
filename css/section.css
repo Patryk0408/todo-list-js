@@ -14,6 +14,11 @@
 .section__tasks {
     padding: 0px;
     margin: 0;
+    word-break: break-word;
+}
+
+.section__task--done {
+    text-decoration: line-through;
 }
 
 .section__item {
@@ -30,6 +35,10 @@
     border: none;
     width: 40px;
     height: 37px;
+}
+
+.section__symbol--done {
+    visibility: hidden;
 }
 
 .section__submit--remove {
