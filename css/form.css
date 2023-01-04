@@ -17,18 +17,8 @@
     padding: 8px;
 }
 
-@media (max-width: 410px) {
+@media (max-width: 450px) {
     .form {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .form__input {
-        width: 100%;
-        padding: 15px;
-    }
-    .form__submit {
-        width: 100%;
-        padding: 15px;
+        grid-template-columns: auto;
     }
 }

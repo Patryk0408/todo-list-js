@@ -15,14 +15,11 @@
     padding: 0px;
     margin: 0;
     word-break: break-word;
+    min-height: 79px;
 }
 
 .section__task--done {
     text-decoration: line-through;
-}
-
-.section__list {
-    min-height: 77px;
 }
 
 .section__item {
@@ -32,6 +29,7 @@
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-gap: 20px;
+    align-items: center;
 }
 
 .section__submit {
