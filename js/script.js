@@ -76,8 +76,6 @@
     }
 
     addNewTask(newTaskContent);
-
-    click()
   };
 
   const init = () => {
