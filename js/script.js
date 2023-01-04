@@ -37,6 +37,10 @@
     });
   };
 
+  const focusOn = () => {
+    document.querySelector(".js-newTask").focus();
+  };
+
   const render = () => {
     let htmlString = "";
 
@@ -84,6 +88,7 @@
     const form = document.querySelector(".js-form");
 
     form.addEventListener("submit", onFormSubmit);
+    form.addEventListener("submit", focusOn);
   };
 
   init();

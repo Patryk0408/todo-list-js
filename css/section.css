@@ -21,6 +21,10 @@
     text-decoration: line-through;
 }
 
+.section__list {
+    min-height: 77px;
+}
+
 .section__item {
     padding: 20px;
     border-bottom: 2px solid #f1f1f1;
@@ -34,7 +38,15 @@
     background-color: green;
     border: none;
     width: 40px;
-    height: 37px;
+    height: 39px;
+}
+
+.section__submit:hover {
+    background-color: hsl(120, 100%, 30%);
+}
+
+.section__submit:active {
+    border: 2px solid #000;
 }
 
 .section__symbol--done {
@@ -45,7 +57,11 @@
     background-color: red;
     border: none;
     width: 40px;
-    height: 37px;
+    height: 39px;
+}
+
+.section__submit--remove:hover {
+    background-color: hsl(0, 100%, 60%);
 }
 
 .material-symbols-outlined {
