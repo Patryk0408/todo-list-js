@@ -29,14 +29,14 @@
     background-color: green;
     border: none;
     width: 40px;
-    height: 40px;
+    height: 37px;
 }
 
 .section__submit--remove {
     background-color: red;
     border: none;
     width: 40px;
-    height: 40px;
+    height: 37px;
 }
 
 .material-symbols-outlined {
@@ -46,8 +46,5 @@
         'GRAD'0,
         'opsz'48;
     color: #FFF;
-}
-
-.done {
-    display: none;
+    padding-top: 3px;
 }
