@@ -8,3 +8,8 @@ This's simple to do list encoded only in Javascript, HTML and CSS.
 3. Enjoy the functions of marking the task done and deleting tasks.
 
 ![image](image/Przechwytywanie.JPG)
+
+### Technology:
+- HTML, CSS
+- Javascript
+- BEM
