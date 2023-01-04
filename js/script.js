@@ -41,13 +41,22 @@
     let htmlString = "";
 
     for (const task of tasks) {
-      htmlString += `
-                <li class="section__item" ${task.done ? 'style="text-decoration: line-through"' : ""}>
-                    <button class="section__submit js-done">Zrobione</button>
-                    ${task.content};
-                    <button class="section__submit--remove js-remove">Usuń</button>                    
-                </li>
-            `;
+      htmlString +=
+        `<li class="section__item">
+          <button class="section__submit js-done">
+            <span class="material-symbols-outlined done">
+              check
+            </span>
+          </button>
+          <span class="section__task" ${task.done ? "style=\"text-decoration: line-through\"" : ""}>
+            ${task.content}
+          </span>
+          <button class="section__submit--remove js-remove">
+            <span class="material-symbols-outlined">
+              delete
+            </span>
+          </button>                    
+          </li>`;
     }
 
     document.querySelector(".js-tasks").innerHTML = htmlString;

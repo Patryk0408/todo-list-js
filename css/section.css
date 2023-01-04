@@ -13,8 +13,7 @@
 
 .section__tasks {
     padding: 0px;
-    margin: 10px 0;
-
+    margin: 0;
 }
 
 .section__item {
@@ -22,17 +21,33 @@
     border-bottom: 2px solid #f1f1f1;
     list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(5, 20%);
-    grid-template-areas: 
-    "done task task task delete";
-    justify-content: stretch;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 20px;
 }
 
 .section__submit {
-    grid-area: done;
+    background-color: green;
+    border: none;
+    width: 40px;
+    height: 40px;
 }
 
 .section__submit--remove {
-    grid-area: delete;
-    text-decoration: none;
+    background-color: red;
+    border: none;
+    width: 40px;
+    height: 40px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL'0,
+        'wght'400,
+        'GRAD'0,
+        'opsz'48;
+    color: #FFF;
+}
+
+.done {
+    display: none;
 }
