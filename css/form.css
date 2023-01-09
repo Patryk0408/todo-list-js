@@ -20,7 +20,8 @@
 
 .form__submit:hover {
   background-color: hsl(180, 100%, 35%);
-  transform: scale(1.1)
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 @media (max-width: 450px) {

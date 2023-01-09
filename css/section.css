@@ -45,6 +45,7 @@
 
 .section__submit:hover {
   background-color: hsl(120, 100%, 30%);
+  cursor: pointer;
 }
 
 .section__submit:active {
@@ -53,7 +54,6 @@
 
 .section__submit:disabled {
   color: black;
-  cursor: default;
 }
 
 .section__symbol--done {
@@ -70,6 +70,7 @@
 
 .section__submit--remove:hover {
   background-color: hsl(0, 100%, 60%);
+  cursor: pointer;
 }
 
 .material-symbols-outlined {
@@ -102,10 +103,12 @@
 
 .section__button:hover {
   color: hsl(180, 100%, 35%);
+  cursor: pointer;
 }
 
 .section__button:disabled {
   color: rgb(172, 172, 172);
+  cursor: not-allowed;
 }
 
 @media (max-width: 450px) {
