@@ -1,100 +1,115 @@
 .section {
-    background-color: #FFF;
-    width: 100%;
-    box-shadow: 0 0 4px 0 #d7d3d312;
-    margin-bottom: 10px;
+  background-color: #FFF;
+  width: 100%;
+  box-shadow: 0 0 4px 0 #d7d3d312;
+  margin-bottom: 10px;
 }
 
 .section__title {
-    padding: 20px;
-    margin: 0;
+  padding: 20px;
+  margin: 0;
 }
 
 .section__tasks {
-    padding: 0px;
-    margin: 0;
-    word-break: break-word;
-    min-height: 79px;
+  padding: 0px;
+  margin: 0;
+  word-break: break-word;
+  min-height: 79px;
 }
 
 .section__task--done {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .section__item {
-    padding: 20px;
-    border-bottom: 2px solid #f1f1f1;
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-gap: 20px;
-    align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #f1f1f1;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.section__item--hidden {
+  display: none;
 }
 
 .section__submit {
-    background-color: green;
-    border: none;
-    width: 40px;
-    height: 39px;
+  background-color: green;
+  border: none;
+  width: 40px;
+  height: 39px;
 }
 
 .section__submit:hover {
-    background-color: hsl(120, 100%, 30%);
+  background-color: hsl(120, 100%, 30%);
 }
 
 .section__submit:active {
-    border: 2px solid #000;
+  border: 2px solid #000;
+}
+
+.section__submit:disabled {
+  color: black;
+  cursor: default;
 }
 
 .section__symbol--done {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .section__submit--remove {
-    background-color: red;
-    border: none;
-    width: 40px;
-    height: 39px;
+  background-color: red;
+  border: none;
+  width: 40px;
+  height: 39px;
 }
 
 .section__submit--remove:hover {
-    background-color: hsl(0, 100%, 60%);
+  background-color: hsl(0, 100%, 60%);
 }
 
 .material-symbols-outlined {
-    font-variation-settings:
-        'FILL'0,
-        'wght'400,
-        'GRAD'0,
-        'opsz'48;
-    color: #FFF;
-    padding-top: 3px;
+  font-variation-settings:
+    'FILL'0,
+    'wght'400,
+    'GRAD'0,
+    'opsz'48;
+  color: #FFF;
+  padding-top: 3px;
 }
 
 .section__header {
-    display: grid;
-    grid-template-columns: auto auto;
-    border-bottom: 2px solid #f1f1f1;
+  display: grid;
+  grid-template-columns: auto auto;
+  border-bottom: 2px solid #f1f1f1;
 }
 
 .section__buttons {
   display: grid;
   grid-template-columns: auto auto;
 }
+
 .section__button {
-    background-color: #FFF;
-    border: none;
-    color: teal;
+  background-color: #FFF;
+  border: none;
+  color: teal;
 }
 
 .section__button:hover {
   color: hsl(180, 100%, 35%);
 }
 
+.section__button:disabled {
+  color: rgb(172, 172, 172);
+}
+
 @media (max-width: 450px) {
   .section__header {
     grid-template-columns: auto;
   }
+
   .section__buttons {
     grid-template-columns: auto;
     grid-gap: 20px;
