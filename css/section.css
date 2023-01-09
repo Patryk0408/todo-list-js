@@ -40,6 +40,7 @@
   border: none;
   width: 40px;
   height: 39px;
+  transition: 0.3s;
 }
 
 .section__submit:hover {
@@ -64,6 +65,7 @@
   border: none;
   width: 40px;
   height: 39px;
+  transition: 0.3s;
 }
 
 .section__submit--remove:hover {
@@ -95,6 +97,7 @@
   background-color: #FFF;
   border: none;
   color: teal;
+  transition: 0.3s
 }
 
 .section__button:hover {
