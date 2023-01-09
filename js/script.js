@@ -43,6 +43,11 @@
     });
   };
 
+  const toggleAllTasksDone = () => {
+    tasks = tasks.map((task) => ({ ...task, done: true }));
+
+    render();
+  }
   const focusOn = () => {
     document.querySelector(".js-newTask").focus();
   };
@@ -83,7 +88,7 @@
       <button class="section__button js-showOrHideButton">
         ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
       </button>
-      <button class="section__button js-doEndedButton" ${tasks.every(({ done }) => done) ? "disabled" : ""}>
+      <button class="section__button js-doDoneAllButton" ${tasks.every(({ done }) => done) ? "disabled" : ""}>
         Ukończ wszystkie
       </button>`;
     };
@@ -92,7 +97,15 @@
       taskSectionButtons;
   };
 
-  const bindButtonsEvents = () => {};
+  const bindToggleAllEventsDone = () => {
+    const toggleAllDone = document.querySelector(".js-doDoneAllButton");
+
+    if (toggleAllDone) {
+      toggleAllDone.addEventListener("click", () => {
+        toggleAllTasksDone();
+      });
+    } 
+  };
 
   const render = () => {
     renderTasks();
@@ -100,7 +113,7 @@
 
     bindRemoveEvents();
     bindToggleDoneEvents();
-    bindButtonsEvents();
+    bindToggleAllEventsDone();
   };
 
   const onFormSubmit = (event) => {
