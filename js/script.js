@@ -1,21 +1,27 @@
 {
-  const tasks = [];
+  let tasks = [];
 
   const addNewTask = (newTaskContent) => {
-    tasks.push({
-      content: newTaskContent,
-    });
+    tasks = [...tasks, { content: newTaskContent }];
 
     render();
   };
 
   const removeTask = (taskIndex) => {
-    tasks.splice(taskIndex, 1);
+    tasks = [...tasks.slice(0, taskIndex), ...tasks.slice(taskIndex + 1)];
+
     render();
   };
 
   const toggleTaskDone = (taskIndex) => {
-    tasks[taskIndex].done = !tasks[taskIndex].done;
+    const newTasks = [...tasks];
+
+    newTasks[taskIndex] = {
+      ...newTasks[taskIndex],
+      done: !newTasks[taskIndex].done,
+    };
+
+    tasks = newTasks;
     render();
   };
 
@@ -45,10 +51,11 @@
     let htmlString = "";
 
     for (const task of tasks) {
-      htmlString +=
-        `<li class="section__item">
+      htmlString += `<li class="section__item">
           <button class="section__submit js-done">
-            <span class="material-symbols-outlined done${!task.done ? " section__symbol--done" : ""}">
+            <span class="material-symbols-outlined done${
+              !task.done ? " section__symbol--done" : ""
+            }">
               check
             </span>
           </button>
