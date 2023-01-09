@@ -24,7 +24,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 767px) {
   .form {
     grid-template-columns: auto;
   }
