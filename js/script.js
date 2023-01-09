@@ -80,10 +80,10 @@
 
     if (tasks.length !== 0) {
       taskSectionButtons += `
-      <button>
+      <button class="section__button js-showOrHideButton">
         ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
       </button>
-      <button ${tasks.every(({ done }) => done) ? "disabled" : ""}>
+      <button class="section__button js-doEndedButton" ${tasks.every(({ done }) => done) ? "disabled" : ""}>
         Ukończ wszystkie
       </button>`;
     };

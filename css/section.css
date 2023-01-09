@@ -76,3 +76,27 @@
     grid-template-columns: auto auto;
     border-bottom: 2px solid #f1f1f1;
 }
+
+.section__buttons {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.section__button {
+    background-color: #FFF;
+    border: none;
+    color: teal;
+}
+
+.section__button:hover {
+  color: hsl(180, 100%, 35%);
+}
+
+@media (max-width: 450px) {
+  .section__header {
+    grid-template-columns: auto;
+  }
+  .section__buttons {
+    grid-template-columns: auto;
+    grid-gap: 20px;
+  }
+}
