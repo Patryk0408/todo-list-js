@@ -14,14 +14,11 @@
   };
 
   const toggleTaskDone = (taskIndex) => {
-    const newTasks = [...tasks];
-
-    newTasks[taskIndex] = {
-      ...newTasks[taskIndex],
-      done: !newTasks[taskIndex].done,
+    tasks[taskIndex] = {
+      ...tasks[taskIndex],
+      done: !tasks[taskIndex].done,
     };
 
-    tasks = newTasks;
     render();
   };
 
