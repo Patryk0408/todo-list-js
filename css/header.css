@@ -1,3 +1,47 @@
 .header {
-    margin: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 20px;
+  border-bottom: 2px solid #f1f1f1;
+  padding: 20px;
+}
+
+.header__title {
+  margin: 0;
+}
+
+.header__buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__button {
+  background-color: transparent;
+  border: none;
+  color: teal;
+  transition: 0.3s;
+  margin: 0 0 0 20px;
+}
+
+.header__button:hover {
+  color: hsl(180, 100%, 35%);
+  cursor: pointer;
+}
+
+.header__button:disabled {
+  color: rgb(172, 172, 172);
+  cursor: not-allowed;
+}
+
+@media (max-width: 767px) {
+  .header__button {
+    flex-basis: 100%;
+    margin: 20px;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+  }
 }
